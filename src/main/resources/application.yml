@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/test
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+  mustache:
+    prefix: classpath:/templates/
+    suffix: .html
+
+  profiles:
+    include: oauth
+
+  resources:
+    static-locations: "classpath:/resources/,classpath:/templates/,classpath:/static/,/"
+
+logging:
+  level:
+    web: DEBUG
+
+
+
+
+
